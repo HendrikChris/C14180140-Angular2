@@ -1,0 +1,30 @@
+<p>
+Judul : <input [(ngModel)]="judul" type="text">
+</p>
+<p>
+Isi : <input [(ngModel)]="isi" type="">
+</p>
+<p>
+Judul : <input [(ngModel)]="tanggal" type="date">
+</p>
+
+<button (click)="add()">Add</button>
+<br/><br/>
+
+
+<table style="width:100%">
+  <tr>
+    <th>No.</th>
+    <th>Judul</th>
+    <th>Isi</th>
+    <th>tanggal</th>
+    <th>Detail</th>
+  </tr>
+  <tr *ngFor="let item of list_note; let i = index">
+    <td>{{i+1}}.</td> 
+    <td>{{item.judul}}.</td> 
+    <td>{{item.isi}}.</td> 
+    <td>{{item.tanggal}}.</td> 
+    <td><a routerLink="/detail/{{i}}">link</a></td>
+  </tr>
+</table>

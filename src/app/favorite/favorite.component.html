@@ -1,0 +1,15 @@
+<br/><br/>
+<table style="width:100%">
+  <tr>
+    <th>No.</th>
+    <th>Judul</th>
+    <th>Isi</th>
+    <th>tanggal</th>
+  </tr>
+  <tr *ngFor="let item of list_favorite_note; let i = index">
+    <td>{{i+1}}.</td> 
+    <td>{{item.judul}}.</td> 
+    <td>{{item.isi}}.</td> 
+    <td>{{item.tanggal}}.</td> 
+  </tr>
+</table>
